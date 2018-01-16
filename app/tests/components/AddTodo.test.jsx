@@ -1,8 +1,8 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var expect = require('expect');
-var $ = require('jQuery');
 var TestUtils = require('react-addons-test-utils');
+var expect = require('expect');
+var $ = require('jquery');
 
 var AddTodo = require('AddTodo');
 
@@ -14,7 +14,7 @@ describe('AddTodo', () => {
   it('should call onAddTodo prop with valid data', () => {
     var todoText = 'Check mail';
     var spy = expect.createSpy();
-    var addTodo = TestUtils.renderIntoDocumnet(<AddTodo onAddTodo={spy}/>);
+    var addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
     var $el = $(ReactDOM.findDOMNode(addTodo));
 
     addTodo.refs.todoText.value = todoText;
@@ -26,7 +26,7 @@ describe('AddTodo', () => {
   it('should not call onAddTodo prop when invalid input', () => {
     var todoText = '';
     var spy = expect.createSpy();
-    var addTodo = TestUtils.renderIntoDocumnet(<AddTodo onAddTodo={spy}/>);
+    var addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
     var $el = $(ReactDOM.findDOMNode(addTodo));
 
     addTodo.refs.todoText.value = todoText;
