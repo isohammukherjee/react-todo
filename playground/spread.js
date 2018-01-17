@@ -1,5 +1,5 @@
 // function add (a, b) {
-//   return a+b;
+//   return a + b;
 // }
 //
 // console.log(add(3, 1));
@@ -13,18 +13,20 @@
 //
 // console.log(final);
 
-var person = ['Soham', 25];
-var perosnTwo = ['Jen', 21];
+var person = ['Andrew', 25];
+var personTwo = ['Jen', 29];
+// Hi Andrew, you are 25
 
-function greet (name, age){
-  console.log('Hi' + name + ', you are ' + age);
+function greet (name, age) {
+  console.log('Hi ' + name + ', you are ' + age);
 }
 greet(...person);
-greet(...perosnTwo);
+greet(...personTwo);
 
+var names = ['Mike', 'Ben'];
+var final = ['Andrew', ...names];
+// Hi Andrew
 
-var names = ['Mike', 'Ben', 'Bale'];
-var final = ['Soham', ...names];
 final.forEach(function (name) {
-  console.log('Hi ' + name)
-})
+  console.log('Hi ' + name);
+});
