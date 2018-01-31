@@ -26,7 +26,6 @@ describe('Actions', () => {
       type: 'ADD_TODO',
       text: 'Thing to do'
     };
-
     var res = actions.addTodo(action.text);
 
     expect(res).toEqual(action);
@@ -41,5 +40,4 @@ describe('Actions', () => {
 
     expect(res).toEqual(action);
   });
-
 });
